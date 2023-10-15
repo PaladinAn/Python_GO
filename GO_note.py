@@ -1,3 +1,32 @@
+# Lambda 3大功能
+
+# 1.製作函數
+# a = lambda x: x**3
+# 輸入 a(2)
+# 得到 2*2*2=====8
+
+# 2.作為def 後  Return值運算
+# def demo():
+#       return lambda x: x**3
+# 輸入 a = demo()
+# 輸入 a (2)
+# 得到 2*2*2=====8
+
+# 3.用函數作為定義運算的參數
+
+# >4 印出來
+a=[1, 2, 3, 4, 5, 6]
+for i in filter(lambda x: x>4, a):
+      print(i)
+
+# 先2次方再印出來
+for i in map(lambda x: x**2, a):
+      print(i)
+
+
+
+
+-----------------------------------------------------------------
 # lambda 變數1, 變數2, 變數3....:運算式
 
 Ex1.
@@ -31,6 +60,8 @@ kb=ka(lambda a:a<3, number)   #條件判斷
 
 #三件套
 # 1. map 將串列傳入進行運算 2. filter 篩選 3. reduce
+
+
 
 # [map]
 # map()內建方法會將串列(List)中的每個元素傳入Lambda函式進行特定的運算，最後回傳每個元素的運算結果
@@ -102,3 +133,5 @@ list(map(lambda s: s["name"], list(filter(lambda s: True if s["score"]>= 60 else
 #
 print(list(map(lambda s: s["name"], list(filter(lambda s: True if s["score"]>= 60 else Flase, student)))))
 
+# 
+#
